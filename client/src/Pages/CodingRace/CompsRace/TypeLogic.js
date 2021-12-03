@@ -26,7 +26,7 @@ const CodingRace = props => {
       setColorStyle('black');
       setcurIndx(0); 
       setCurWord(''); 
-      fetch(`http://localhost:3000/language/${props.lang}`).then(response => response.json()).then(response => {
+      fetch(`https://nameless-plateau-19889.herokuapp.com/language/${props.lang}`).then(response => response.json()).then(response => {
         setRight(response); 
         setChecker(response); 
       }).catch(err => console.error('An error occured')); 
