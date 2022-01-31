@@ -14,7 +14,7 @@ const uri = process.env.DB_URI;
 
 mongoose.connect(uri)
     .then(() => console.log('You have Successfully Connected MongoDb.........'))
-    .catch(err => console.error(err));
+    .catch(err => console.error("There was an error connecting with mongoose: " + err));
 
 app.use(json()); 
 app.use(cors()); 
