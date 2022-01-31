@@ -44,7 +44,7 @@ const rebalance = async (bound) => {
 
 }
 
-router.get('/', async (req, res) => {
+router.get('', async (req, res) => {
     const boardList = await getTopScores(); 
     let results = []; 
     if(boardList.length <= 10) {

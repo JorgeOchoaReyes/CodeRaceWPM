@@ -6,7 +6,6 @@ import RegisterScore from './CompsRace/Modal';
 import Redirect from './CompsRace/DirectionButton';
 import LeaderBoard from './CompsRace/Leaderboard';
 import useDimensionHook from '../../Hooks/DimnesionHook'; 
-import Particle from './CompsRace/Particles';
 import './CodingRace.css';
 
 const CodingRace = props => {
