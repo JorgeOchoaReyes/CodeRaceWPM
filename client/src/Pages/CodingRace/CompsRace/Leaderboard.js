@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'; 
 import {Card} from 'react-bootstrap';
 import { GiLaurelCrown } from "react-icons/gi";
+import url_Deploy from '../../../Util/Util';
 
 const BoxScore = props => {
     return(
@@ -18,7 +19,7 @@ const LeaderBoard = props => {
     const [scores, setScores] = useState([]);
 
     useEffect(() => {
-        fetch(`https://nameless-plateau-19889.herokuapp.com/leaderboard/`).then(response => response.json()).then(response => {
+        fetch(`${url_Deploy}leaderboard/`).then(response => response.json()).then(response => {
             setScores(response);  
           }).catch(err => console.error('An error occured')); 
         

@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'; 
 import {Card} from 'react-bootstrap'; 
-
+import url_Deploy from '../../../Util/Util';
 
 
 const CodingRace = props => {
@@ -26,7 +26,7 @@ const CodingRace = props => {
       setColorStyle('black');
       setcurIndx(0); 
       setCurWord(''); 
-      fetch(`https://nameless-plateau-19889.herokuapp.com/language/${props.lang}`).then(response => response.json()).then(response => {
+      fetch(`${url_Deploy}language/${props.lang}`).then(response => response.json()).then(response => {
         setRight(response); 
         setChecker(response); 
       }).catch(err => console.error('An error occured')); 

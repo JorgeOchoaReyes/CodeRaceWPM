@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'; 
 import {Modal, Button} from 'react-bootstrap';
-
+import url_Deploy from '../../../Util/Util';
 
 const PopUpModal = props => {
   const [name, setName] = useState(); 
@@ -31,7 +31,7 @@ const PopUpModal = props => {
 
   const registerScore = async (user) => {
     try {
-      await fetch(`https://nameless-plateau-19889.herokuapp.com/leaderboard/newHighScore`, {
+      await fetch(`${url_Deploy}leaderboard/newHighScore`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({user: user, bound: props.bounds.score})
