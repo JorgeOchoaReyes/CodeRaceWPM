@@ -20,7 +20,7 @@ app.use(json());
 app.use(cors()); 
 app.use(urlencoded({extended: true})); 
 app.use('/language', WordQuery); 
-app.use('/leaderboard', leaderboardQuery); 
+// app.use('/leaderboard', leaderboardQuery); 
 
 //Serve Static assets in __prod__
 
