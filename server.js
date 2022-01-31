@@ -8,6 +8,7 @@ const path = require('path');
 
 const app = express();
 require('dotenv').config();
+//add dotenv to git ignore for github not for deployment 
 
 
 const uri = process.env.DB_URI;
