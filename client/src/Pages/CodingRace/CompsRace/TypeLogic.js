@@ -38,10 +38,9 @@ const CodingRace = props => {
 
   //This is to listen for changes and change whehter the curWord is the same as the expected word 
   useEffect(() => {
-    console.log('Useffect Triggered')
     if(!highlight) {
       setColorStyle('black');
-      document.getElementById('test-input').style.color = 'black';
+      document.getElementById('test-input').style.color = textColor;
     }
     if(highlight) {
       setColorStyle('red'); 
@@ -70,7 +69,7 @@ const CodingRace = props => {
       props.startTyping(); 
     }
 
-    console.log(e.key); 
+    //console.log(e.key); 
 
     //Backspace in case word is typed wrong
     if(e.key === 'Backspace') {
@@ -78,7 +77,7 @@ const CodingRace = props => {
       
       if(curWord === '') return; 
 
-      console.log('Entered Backspace area')
+      //console.log('Entered Backspace area')
       let tempCurWord = curWord.substring(0, curWord.length - 1); 
       let tempchar = curWord.at(curWord.length - 1); 
       console.log(tempchar); 
@@ -106,7 +105,7 @@ const CodingRace = props => {
 
     //End Current typing by Pressing Space Bar
     if(e.key === ' ') {
-      console.log('You have ended the current string!'); 
+      //console.log('You have ended the current string!'); 
 
       //Add Curword to Left 
       setLeft(c => c = [...c, curWord]);
@@ -164,25 +163,27 @@ const CodingRace = props => {
     }
 
   }
+
+  const textColor = 'black';
   return (
     <>
 
-    <Card style={{ width: '50rem', height: '5rem', boxShadow: '0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2)', overflow: 'hidden', border: '3px solid #ff6600', background: ''}}>
+    <Card style={{ width: '50rem', height: '5rem', boxShadow: '0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2)', overflow: 'hidden', border: '3px solid #ff6600', background: 'white'}}>
       <div  style={{display: 'flex', justifyContent: 'center'}}>
 
         <div onClick={() => inputRef.current.focus()} style={{display: 'flex',  flexDirection: 'row', justifyContent: 'center', alignContent: 'center', width:'64rem'}}> 
           
           <div style={{display: 'flex', overflow: 'hidden',  flex: '1', background: '',  justifyContent: 'end'}}> 
-            {left.map((i,j) => <span style={{fontSize: '3rem', paddingRight: '5px',  fontFamily: 'consolas', color: 'black'}} key={j}> {i} </span>)}
+            {left.map((i,j) => <span style={{fontSize: '3rem', paddingRight: '5px',  fontFamily: 'consolas', color: textColor}} key={j}> {i} </span>)}
           </div>
 
           <div id='test-input'  onKeyDown={e => typingHandler(e)} tabIndex='1' autoCorrect='off' autoCapitalize='off' contentEditable='true' ref={inputRef} 
-                                                    style={{ flex: '1', paddingLeft: '4px', paddingRight: '0px', caretColor: 'black', outline: 'none',
-                                                          border: '3px solid transparent', textAlign: 'right', fontSize: '3rem', color: 'black',  fontFamily: 'consolas'
+                                                    style={{ flex: '1', paddingLeft: '4px', paddingRight: '0px', caretColor: textColor, outline: 'none',
+                                                          border: '3px solid transparent', textAlign: 'right', fontSize: '3rem', color: textColor,  fontFamily: 'consolas'
                                                           }}> </div>
           
           <div style={{display: 'flex', overflow: 'hidden', flex: '2', alignContent: 'space-evenly', alignContent: 'center'}}>
-            {right.map((i,j) => <span style={{paddingRight: '25px', fontSize: '3rem', color: 'black', fontFamily: 'consolas'}} key={j}> {i} </span>)}
+            {right.map((i,j) => <span style={{paddingRight: '25px', fontSize: '3rem', color:  textColor, fontFamily: 'consolas'}} key={j}> {i} </span>)}
           </div>   
 
         </div> 

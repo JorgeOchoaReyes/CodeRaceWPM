@@ -6,7 +6,7 @@ const Header = props => {
 
 
     return (
-      <Navbar style={{background: '#0099ff', height: '3.5rem', display: 'flex', justifyContent: 'space-between'}} variant="dark">
+      <Navbar style={{background: 'black', height: '3.5rem', display: 'flex', justifyContent: 'space-between'}} variant="dark">
        
         <div style={{display: 'flex', flexDirection: 'row'}}>
           <Navbar.Brand style={styles.font} href="/welcome">

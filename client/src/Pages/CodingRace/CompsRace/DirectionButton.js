@@ -2,11 +2,13 @@ import React from 'react';
 import {MdKeyboardArrowDown} from 'react-icons/md'
 import { GiLaurelCrown } from "react-icons/gi";
 
+import {Button} from 'react-bootstrap'; 
+
 const redirectButton = props => {
 
     return (
         <> 
-            <div onClick={props.clickHandle}>
+            <div style={{background: 'black'}} onClick={props.clickHandle}>
                 <div style={styles.font}>
    
                     <GiLaurelCrown size={45}/> 
@@ -14,7 +16,7 @@ const redirectButton = props => {
                     <GiLaurelCrown size={45}/> 
            
                 </div>
-                <div > <MdKeyboardArrowDown size='50'/> </div>
+                <div> <MdKeyboardArrowDown color='gold' size='50'/> </div>
             </div> 
         </> 
     )
@@ -26,9 +28,8 @@ let styles = {
         alignContent: 'center',
         fontFamily: 'consolas', 
         fontSize: '30px',
-        color: '#ff6600', 
+        color: 'gold', 
         fontWeight: 'bold',
-
       
     }
 }

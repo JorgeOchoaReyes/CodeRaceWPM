@@ -16,8 +16,8 @@ const ScoreBoard = props => {
 
     return(
         <>
-            <Card style={{ width: '25rem', height: '7rem', boxShadow: '0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2)', alignContent: 'center', flexDirection: 'column', justifyContent: 'center',
-                             display: 'flex', overflow: 'hidden'}}>
+            <Card style={{ width: '25rem', height: '7rem',  alignContent: 'center', flexDirection: 'column', justifyContent: 'center',
+                             display: 'flex', overflow: 'hidden', backgroundColor: 'black'}}>
                 <div style={style.spreadDivs}> 
                     <div style={style.inDivs}> 
                         <div style={style.divStyle}> {props.score} </div>
@@ -60,7 +60,7 @@ let style = {
         paddingRight: '2px', 
     },
     textStyle: {
-        color: 'black', 
+        color: 'white', 
         fontFamily: 'consolas', 
     }
 }

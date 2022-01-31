@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react'; 
 import CodeRace from './Pages/CodingRace/CodingRace';
 import Header from './RouterComps/NavBar';
+import Particle from './Pages/CodingRace/CompsRace/Particles'
 import {Route, Redirect, Switch} from 'react-router-dom';
 
 
@@ -16,6 +17,7 @@ function App() {
           </Route>
 
           <Route exact path='/welcome'>
+            <Particle />
             <CodeRace />
           </Route>
 
