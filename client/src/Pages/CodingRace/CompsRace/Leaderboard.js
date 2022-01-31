@@ -18,7 +18,7 @@ const LeaderBoard = props => {
     const [scores, setScores] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/leaderboard/`).then(response => response.json()).then(response => {
+        fetch(`https://nameless-plateau-19889.herokuapp.com/leaderboard/`).then(response => response.json()).then(response => {
             setScores(response);  
           }).catch(err => console.error('An error occured')); 
         

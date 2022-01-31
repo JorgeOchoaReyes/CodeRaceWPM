@@ -31,7 +31,7 @@ const PopUpModal = props => {
 
   const registerScore = async (user) => {
     try {
-      await fetch(`http://localhost:3000/leaderboard/newHighScore`, {
+      await fetch(`https://nameless-plateau-19889.herokuapp.com/leaderboard/newHighScore`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({user: user, bound: props.bounds.score})
