@@ -97,9 +97,9 @@ const CodingRace = props => {
               <Redirect clickHandle={redirectHandle} />
             </div> 
     
-            {/* <div id='leaderboard' style={{display: 'flex', justifyContent: 'center', paddingBottom: '300px'}} > 
+            <div id='leaderboard' style={{display: 'flex', justifyContent: 'center', paddingBottom: '300px'}} > 
               <LeaderBoard setbounds={setScoresHandle} />
-            </div> */}
+            </div>
 
           </div>
 

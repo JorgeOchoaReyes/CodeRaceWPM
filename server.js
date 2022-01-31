@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const {urlencoded, json} = require('body-parser'); 
 const WordQuery = require('./queries/words');
-// const leaderboardQuery = require('./queries/leaderboard'); 
+const leaderboardQuery = require('./queries/leaderboard'); 
 const mongoose = require('mongoose');
 const path = require('path');
 
@@ -20,7 +20,7 @@ app.use(json());
 app.use(cors()); 
 app.use(urlencoded({extended: true})); 
 app.use('/language', WordQuery); 
-// app.use('/leaderboard', leaderboardQuery); 
+app.use('/leaderboard', leaderboardQuery); 
 
 //Serve Static assets in __prod__
 
